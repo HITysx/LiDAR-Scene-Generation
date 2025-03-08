@@ -49,13 +49,13 @@ Unconditional generation
 To run sampling on pretrained models (and to evaluate your results with flag "--eval"), firstly download our provided pretrained autoencoders to directory `./models/first_stage_models/DiT/[model_name]` and pretrained models to directory `./models/DiT/kitti/[model_name]`:
 
 ```
-CUDA_VISIBLE_DEVICES=0 python scripts/sample.py -d kitti -r models/DiT/kitti/[model_name]/model.ckpt -n 2000 [--eval]
+CUDA_VISIBLE_DEVICES=0 python scripts/sample.py -d kitti -r models/lidm/kitti/[model_name]/model.ckpt -n 2000 [--eval]
 ```
 
 Semantic-Map-to-LiDAR (Camera-to-LiDAR)
 
 ```
-CUDA_VISIBLE_DEVICES=0 python scripts/sample_cond.py -r models/DiT/kitti/sem2lidar/model.ckpt -d kitti [--eval]
+CUDA_VISIBLE_DEVICES=0 python scripts/sample_cond.py -r models/lidm/kitti/sem2lidar/model.ckpt -d kitti [--eval]
 ```
 
 ## Evaluation
@@ -65,7 +65,7 @@ For the details about setup and usage of evaluation toolbox, please refer to the
 To evaluate the model through the given .pcd files:
 
 ```
-CUDA_VISIBLE_DEVICES=0 python scripts/sample.py -d kitti -f models/DiT/kitti/[method]/samples.pcd --eval
+CUDA_VISIBLE_DEVICES=0 python scripts/sample.py -d kitti -f models/lidm/kitti/[method]/samples.pcd --eval
 ```
 
 ## Acknowledgement
