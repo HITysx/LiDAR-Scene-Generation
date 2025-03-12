@@ -71,7 +71,7 @@ For the details about setup and usage of evaluation toolbox, please refer to the
 To evaluate the model through the given .pcd files:
 
 ```
-CUDA_VISIBLE_DEVICES=0 python scripts/sample.py -d kitti -f models/lidm/kitti/[method]/samples.pcd --eval
+CUDA_VISIBLE_DEVICES=0 python scripts/sample.py -d kitti -f models/lidar_scene_generation/kitti/[method]/samples.pcd --eval
 ```
 
 ## Acknowledgement
