@@ -46,16 +46,22 @@ python main.py -b path/to/your/config.yaml -t --gpus 0, -r path/to/your/ckpt/fil
 
 Unconditional generation
 
-To run sampling on pretrained models (and to evaluate your results with flag "--eval"), firstly download our provided pretrained autoencoders to directory `./models/first_stage_models/DiT/[model_name]` and pretrained models to directory `./models/DiT/kitti/[model_name]`:
+To run sampling on pretrained models (and to evaluate your results with flag "--eval"), firstly download our provided pretrained autoencoders to directory `./models/first_stage_models/kitti/[model_name]` and pretrained models to directory `./models/lidar_scene_generation/kitti/[model_name]`:
 
 ```
-CUDA_VISIBLE_DEVICES=0 python scripts/sample.py -d kitti -r models/lidm/kitti/[model_name]/model.ckpt -n 2000 [--eval]
+CUDA_VISIBLE_DEVICES=0 python scripts/sample.py -d kitti -r models/lidar_scene_generation/kitti/uncond/model.ckpt -n 2000 [--eval]
 ```
 
-Semantic-Map-to-LiDAR (Camera-to-LiDAR)
+Semantic-Map-to-LiDAR
 
 ```
-CUDA_VISIBLE_DEVICES=0 python scripts/sample_cond.py -r models/lidm/kitti/sem2lidar/model.ckpt -d kitti [--eval]
+CUDA_VISIBLE_DEVICES=0 python scripts/sample_cond.py -r models/lidar_scene_generation/kitti/sem2lidar/model.ckpt -d kitti [--eval]
+```
+
+Camera-to-LiDAR
+
+```
+CUDA_VISIBLE_DEVICES=0 python scripts/sample_cond.py -r models/lidar_scene_generation/kitti/cam2lidar/model.ckpt -d kitti [--eval]
 ```
 
 ## Evaluation
