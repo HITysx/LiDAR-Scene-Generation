@@ -2,7 +2,7 @@
 This repository contains the code implementation of the paper "Enhancing Realism in LiDAR Scene Generation with CSPA-DFN and Linear Cross-Attention via Diffusion Transformer Model"
 
 <div align="center">
-  <img src="">
+  <img src="https://github.com/HITysx/LiDAR-Scene-Generation/blob/main/assets/lidar%20diffusion%20transformer.pdf">
 </div>
 
 ## Abstract
