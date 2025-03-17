@@ -78,6 +78,15 @@ To evaluate the model through the given .pcd files:
 CUDA_VISIBLE_DEVICES=0 python scripts/sample.py -d kitti -f models/lidar_scene_generation/kitti/[method]/samples.pcd --eval
 ```
 
+## Pre-trained weights
+
+We also provide some pre-trained weights on KITTI datasets here:
+
+- [Autoencoder](https://drive.google.com/drive/folders/1YSmm0Y8clAJCC_2OfnXtX91rsf2_ABbq?usp=sharing)
+- [Uncond](https://drive.google.com/drive/folders/1nyPoN4Nd1HFct5hF_LgmW-Zmi2_RDtv7?usp=sharing)
+- [Sem2lidar](https://drive.google.com/drive/folders/1eTxq5jLmUTiYZn0vpbAmZmvu9BOxQ0Z0?usp=sharing)
+- [Cam2lidar](https://drive.google.com/drive/folders/1vWlcMd7pJYQt3WULGtYVld3zuiffIBE7?usp=sharing)
+
 ## Acknowledgement
 
 - Our codebase for the diffusion models builds heavily on [LiDAR Diffusion](https://github.com/hancyran/LiDAR-Diffusion).
